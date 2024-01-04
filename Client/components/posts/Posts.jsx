@@ -1,5 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
+import style from "./postsStyle.js";
+import Post from "../post/Post.jsx";
 
 const Posts = () => {
   //Temporary
@@ -33,8 +35,10 @@ const Posts = () => {
     },
   ];
   return (
-    <View>
-      <Text>Posts</Text>
+    <View style={style.container}>
+      {posts.map((post) => (
+        <Post post={post} key={post.id} />
+      ))}
     </View>
   );
 };

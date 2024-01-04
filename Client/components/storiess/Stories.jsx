@@ -34,7 +34,7 @@ const Stories = () => {
     <View style={style.container}>
       <View style={style.story}>
         <Image source={{ uri: user.profilePic }} style={style.img} />
-        <Text>{user.name}</Text>
+        <Text style={style.name}>{user.name}</Text>
         <TouchableOpacity style={style.button}>
           <Text style={style.textButton}>+</Text>
         </TouchableOpacity>
@@ -42,7 +42,7 @@ const Stories = () => {
       {stories.map((story) => (
         <View key={story.id} style={style.story}>
           <Image source={{ uri: story.img }} style={style.img} />
-          <Text>{story.name}</Text>
+          <Text style={style.name}>{story.name}</Text>
         </View>
       ))}
     </View>
