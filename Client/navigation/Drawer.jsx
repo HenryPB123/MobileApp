@@ -4,6 +4,7 @@ import Stories from "../components/storiess/Stories.jsx";
 import Home from "../screens/home/Home.jsx";
 import Profile from "../screens/profile/Profile.jsx";
 import LeftBar from "../components/leftBar/LeftBar.jsx";
+import Comments from "../components/comments/Comments.jsx";
 
 //Drawer
 const MyDrawer = createDrawerNavigator();
@@ -19,10 +20,11 @@ const Drawer = () => {
         //   tabBarActiveTintColor: "teal",
       }}
     >
-      <MyDrawer.Screen name="Home" component={Home} />
+      <MyDrawer.Screen name="MyHome" component={Home} />
       <MyDrawer.Screen name="Posts" component={Posts} />
       <MyDrawer.Screen name="Stories" component={Stories} />
       <MyDrawer.Screen name="Profile" component={Profile} />
+      <MyDrawer.Screen name="Comments" component={Comments} />
     </MyDrawer.Navigator>
   );
 };

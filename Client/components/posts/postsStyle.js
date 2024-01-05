@@ -2,8 +2,8 @@ import { StatusBar, StyleSheet } from "react-native";
 
 const postsStyle = StyleSheet.create({
   posts: {
-    width: "100%",
-    paddingTop: 10,
+    alignItems: "center",
+    justifyContent: "center",
   },
   container: {
     display: "flex",

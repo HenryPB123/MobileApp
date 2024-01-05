@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, ScrollView, Dimensions } from "react-native";
 import React from "react";
 import style from "./postsStyle.js";
 import Post from "../post/Post.jsx";
@@ -22,7 +22,7 @@ const Posts = () => {
       profilePic:
         "https://images.pexels.com/photos/56733/pexels-photo-56733.jpeg?auto=compress&cs=tinysrgb&w=800",
       description:
-        "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nemo iste mollitia temporibus ea autem consequuntur inventore. Accusamus porro, ipsam ad nisi laborum, quasi pariatur eum modi aspernatur odit sed.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nemo iste mollitia temporibus ea autem consequuntur inventore. Accusamus porro, ipsam ad nisi laborum, quasi pariatur eum modi aspernatur odit sed.",
     },
     {
       id: 3,
@@ -33,12 +33,24 @@ const Posts = () => {
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       img: "https://images.pexels.com/photos/2317904/pexels-photo-2317904.jpeg?auto=compress&cs=tinysrgb&w=800",
     },
+    {
+      id: 4,
+      name: "Pet Name",
+      userId: 4,
+      profilePic:
+        "https://images.pexels.com/photos/56733/pexels-photo-56733.jpeg?auto=compress&cs=tinysrgb&w=800",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+      img: "https://images.pexels.com/photos/2317904/pexels-photo-2317904.jpeg?auto=compress&cs=tinysrgb&w=800",
+    },
   ];
+
   return (
-    <View style={style.container}>
-      {posts.map((post) => (
-        <Post post={post} key={post.id} />
-      ))}
+    <View style={style.posts}>
+      <ScrollView>
+        {posts.map((post) => (
+          <Post post={post} key={post.id} />
+        ))}
+      </ScrollView>
     </View>
   );
 };
