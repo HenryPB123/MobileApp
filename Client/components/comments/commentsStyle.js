@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 
 const commentsStyle = StyleSheet.create({
   comments: {
+    // flex: 1,
     padding: 5,
   },
   write: {
@@ -32,37 +33,6 @@ const commentsStyle = StyleSheet.create({
   },
   textButton: {
     color: "blue",
-  },
-  comment: {
-    margin: 10,
-    display: "flex",
-    justifyContent: "space-between",
-    gap: 5,
-  },
-  info: {
-    paddingLeft: 10,
-    flex: 5,
-    display: "flex",
-    flexDirection: "row",
-
-    gap: 15,
-    alignItems: "center",
-  },
-  img: {
-    width: 24,
-    height: 24,
-    borderRadius: 12,
-    objectFit: "cover",
-  },
-  name: {
-    fontWeight: "500",
-    fontSize: 15,
-  },
-  date: {
-    color: "gray",
-  },
-  description: {
-    textAlign: "justify",
   },
 });
 

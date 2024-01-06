@@ -1,9 +1,17 @@
-import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  TextInput,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native";
 import React from "react";
 
 //style
 import style from "./commentsStyle.js";
 import { useNavigation } from "@react-navigation/native";
+import Comment from "../comment/Comment.jsx";
 
 const Comments = () => {
   //Temporary
@@ -29,6 +37,30 @@ const Comments = () => {
       profilePicture:
         "https://images.pexels.com/photos/977935/pexels-photo-977935.jpeg?auto=compress&cs=tinysrgb&w=800",
     },
+    {
+      id: 3,
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora quo velit incidunt aut cum numquam praesentium, dignissimos laborum qui aliquam a nam aspernatur laboriosam nulla consequatur nisi autem minima nemo.",
+      name: "Name Pet",
+      userId: 1,
+      profilePicture:
+        "https://images.pexels.com/photos/1828875/pexels-photo-1828875.jpeg?auto=compress&cs=tinysrgb&w=800",
+    },
+    {
+      id: 4,
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora quo velit incidunt aut cum numquam praesentium, dignissimos laborum qui aliquam a nam aspernatur laboriosam nulla consequatur nisi autem minima nemo.",
+      name: "Name Pet",
+      userId: 2,
+      profilePicture:
+        "https://images.pexels.com/photos/977935/pexels-photo-977935.jpeg?auto=compress&cs=tinysrgb&w=800",
+    },
+    {
+      id: 5,
+      desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora quo velit incidunt aut cum numquam praesentium, dignissimos laborum qui aliquam a nam aspernatur laboriosam nulla consequatur nisi autem minima nemo.",
+      name: "Name Pet",
+      userId: 1,
+      profilePicture:
+        "https://images.pexels.com/photos/1828875/pexels-photo-1828875.jpeg?auto=compress&cs=tinysrgb&w=800",
+    },
   ];
 
   const navigation = useNavigation();
@@ -46,14 +78,7 @@ const Comments = () => {
         </TouchableOpacity>
       </View>
       {comments.map((comment) => (
-        <View style={style.comment} key={comment.id}>
-          <View style={style.info}>
-            <Image source={{ uri: comment.profilePicture }} style={style.img} />
-            <Text style={style.name}>{comment.name}</Text>
-            <Text style={style.date}>1 hour ago</Text>
-          </View>
-          <Text style={style.description}>{comment.desc}</Text>
-        </View>
+        <Comment key={comment.id} comment={comment} />
       ))}
     </View>
   );

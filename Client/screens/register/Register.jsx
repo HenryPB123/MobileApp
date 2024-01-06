@@ -1,4 +1,10 @@
-import { View, Text, TouchableOpacity, TextInput } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  TextInput,
+  KeyboardAvoidingView,
+} from "react-native";
 import React from "react";
 import style from "./registerStyle.js";
 import { useNavigation } from "@react-navigation/native";
@@ -6,6 +12,15 @@ import { useNavigation } from "@react-navigation/native";
 const Register = () => {
   const navigation = useNavigation();
   return (
+    // <KeyboardAvoidingView
+    //   style={{
+    //     height: "100%",
+    //     width: "100%",
+    //     flex: 1,
+    //   }}
+    //   keyboardVerticalOffset={Platform.OS === "android" ? 0 : 45}
+    //   behavior="padding"
+    // >
     <View style={style.container}>
       <Text style={style.title}>SING UP</Text>
       <View style={style.containerInputs}>
@@ -27,6 +42,7 @@ const Register = () => {
         </TouchableOpacity>
       </View>
     </View>
+    // </KeyboardAvoidingView>
   );
 };
 

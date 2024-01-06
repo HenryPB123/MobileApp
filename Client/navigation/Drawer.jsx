@@ -5,6 +5,7 @@ import Home from "../screens/home/Home.jsx";
 import Profile from "../screens/profile/Profile.jsx";
 import LeftBar from "../components/leftBar/LeftBar.jsx";
 import Comments from "../components/comments/Comments.jsx";
+import { SafeAreaView } from "react-native";
 
 //Drawer
 const MyDrawer = createDrawerNavigator();
@@ -16,7 +17,7 @@ const Drawer = () => {
       screenOptions={{
         headerTitleAlign: "center",
 
-        //   headerShown: false,
+        headerShown: false,
         //   tabBarActiveTintColor: "teal",
       }}
     >

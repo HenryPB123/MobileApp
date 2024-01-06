@@ -4,6 +4,7 @@ const postsStyle = StyleSheet.create({
   posts: {
     alignItems: "center",
     justifyContent: "center",
+    flex: 1,
   },
   container: {
     display: "flex",
