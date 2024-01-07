@@ -16,8 +16,8 @@ const storiesStyle = StyleSheet.create({
     position: "relative",
     width: 50,
     height: 70,
-    borderWidth: 0.5,
-    borderColor: "#fca311",
+    borderWidth: 1,
+    borderColor: "#012a4a",
   },
   img: {
     height: "100%",

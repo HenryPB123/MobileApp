@@ -74,12 +74,16 @@ const Comments = () => {
           style={style.textInput}
         />
         <TouchableOpacity style={style.button}>
-          <Text style={style.textButton}>Send</Text>
+          <Text style={style.textButton}>SEND</Text>
         </TouchableOpacity>
       </View>
-      {comments.map((comment) => (
-        <Comment key={comment.id} comment={comment} />
-      ))}
+      <View style={style.commentContainer}>
+        <ScrollView>
+          {comments.map((comment) => (
+            <Comment key={comment.id} comment={comment} />
+          ))}
+        </ScrollView>
+      </View>
     </View>
   );
 };

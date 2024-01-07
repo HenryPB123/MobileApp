@@ -4,6 +4,7 @@ import {
   Image,
   TouchableOpacity,
   useAnimatedValue,
+  ScrollView,
 } from "react-native";
 import React, { useState } from "react";
 

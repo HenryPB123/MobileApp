@@ -6,9 +6,9 @@ const postsStyle = StyleSheet.create({
     justifyContent: "center",
     flex: 1,
   },
-  container: {
-    display: "flex",
-  },
+  // container: {
+  //   display: "flex",
+  // },
 });
 
 export default postsStyle;

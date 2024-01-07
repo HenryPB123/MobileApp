@@ -1,23 +1,22 @@
 import { StyleSheet } from "react-native";
 
 const commentStyle = StyleSheet.create({
-  commentContainer: {
-    flex: 1,
-    justifyContent: "center",
-  },
   comment: {
-    flex: 1,
-    margin: 10,
+    // flex: 1,
+    margin: 5,
     display: "flex",
-    // justifyContent: "space-between",
     gap: 5,
+    backgroundColor: "#2a6f97",
+    justifyContent: "center",
+    borderRadius: 5,
+    padding: 5,
   },
   info: {
-    paddingLeft: 10,
-    flex: 5,
+    backgroundColor: "white",
+    padding: 5,
     display: "flex",
     flexDirection: "row",
-
+    borderRadius: 5,
     gap: 15,
     alignItems: "center",
   },
@@ -32,10 +31,12 @@ const commentStyle = StyleSheet.create({
     fontSize: 15,
   },
   date: {
-    color: "gray",
+    color: "orange",
+    fontSize: 12,
   },
   description: {
     textAlign: "justify",
+    color: "white",
   },
 });
 

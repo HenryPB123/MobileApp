@@ -7,7 +7,9 @@ const postStyle = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: "white",
     gap: 5,
+    // flex: 1,
   },
+
   user: {
     display: "flex",
     flexDirection: "row",
