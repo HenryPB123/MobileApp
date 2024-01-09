@@ -1,12 +1,22 @@
 import { View, Text, TextInput, Image } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
+
 //Style
 import style from "./navbarStyle.js";
 
 //Icons
-import { FontAwesome, AntDesign, Feather } from "@expo/vector-icons";
+import {
+  FontAwesome,
+  AntDesign,
+  Feather,
+  MaterialCommunityIcons,
+} from "@expo/vector-icons";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const Navbar = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={style.container}>
       <View style={style.iconContainer}>
@@ -14,6 +24,7 @@ const Navbar = () => {
           source={require("../../assets/huella.png")}
           style={style.img}
         ></Image>
+        <Text style={style.textTitle}>SWP</Text>
         <FontAwesome name="moon-o" style={style.icon} />
         <AntDesign name="appstore-o" style={style.icon} />
       </View>
@@ -24,12 +35,15 @@ const Navbar = () => {
       <View style={style.iconContainer}>
         <FontAwesome name="bell-o" style={style.icon} />
         <Feather name="mail" style={style.icon} />
-        <Image
+        <TouchableOpacity onPress={() => navigation.navigate("Home")}>
+          <MaterialCommunityIcons name="home-circle" style={style.iconHome} />
+        </TouchableOpacity>
+        {/* <Image
           source={{
             uri: "https://images.pexels.com/photos/69932/tabby-cat-close-up-portrait-69932.jpeg?auto=compress&cs=tinysrgb&w=600",
           }}
           style={style.imgPro}
-        ></Image>
+        ></Image> */}
       </View>
     </View>
   );

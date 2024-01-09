@@ -5,9 +5,22 @@ const profileStyle = StyleSheet.create({
     padding: 10,
     flex: 1,
   },
+  containerViewIcons: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    backgroundColor: "#2F6690",
+    padding: 10,
+  },
+  icons: {
+    color: "orange",
+    fontSize: 25,
+    fontWeight: "500",
+  },
+
   images: {
     width: "100%",
-    height: 300,
+    height: 220,
     position: "relative",
   },
   cover: {
@@ -25,33 +38,43 @@ const profileStyle = StyleSheet.create({
     end: 70,
     start: 70,
     // margin: "auto",
-    top: 200,
+    top: 130,
   },
-  profileContainer: {
-    margin: 20,
-  },
+  // profileContainer: {
+  //   margin: 5,
+  //   backgroundColor: "red",
+  //   display: "flex",
+  //   flexDirection: "row",
+  // },
   userInfo: {
-    height: 25,
-    padding: 20,
-    paddingTop: 90,
-    borderRadius: 20,
-    // background-color: themed("bg");
-    // color: themed("textColor");
-    padding: 50,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
+    height: 150,
+    margin: 5,
+    flexDirection: "row",
+    backgroundColor: "gray",
+    padding: 5,
   },
-  left: {},
+  left: {
+    flex: 1,
+    backgroundColor: "blue",
+    height: 100,
+  },
   icon: {},
-  center: {},
+  center: {
+    flex: 1,
+    backgroundColor: "pink",
+    height: 100,
+  },
   titleCenter: {},
   info: {},
   item: {},
   textCenter: {},
   button: {},
   textButton: {},
-  right: {},
+  right: {
+    flex: 1,
+    height: 100,
+    backgroundColor: "yellow",
+  },
 });
 
 export default profileStyle;

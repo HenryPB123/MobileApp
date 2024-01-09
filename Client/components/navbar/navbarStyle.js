@@ -5,7 +5,7 @@ const navbarStyle = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     width: "100%",
-    backgroundColor: "#ebebeb",
+    backgroundColor: "#2F6690",
     justifyContent: "space-between",
     alignItems: "center",
     padding: 6,
@@ -16,9 +16,13 @@ const navbarStyle = StyleSheet.create({
     alignItems: "center",
     gap: 5,
   },
+  textTitle: {
+    color: "#fca311",
+    fontWeight: "900",
+  },
   img: {
-    width: 40,
-    height: 40,
+    width: 30,
+    height: 30,
   },
   imgPro: {
     width: 36,
@@ -31,7 +35,7 @@ const navbarStyle = StyleSheet.create({
   inputContainer: {
     display: "flex",
     flexDirection: "row",
-    backgroundColor: "#f7f7ff",
+    backgroundColor: "#EBEBEB",
     borderWidth: 0.5,
     borderColor: "#fca311",
     width: "40%",
@@ -49,7 +53,12 @@ const navbarStyle = StyleSheet.create({
   },
   icon: {
     fontSize: 20,
-    color: "#004e98",
+    color: "orange",
+    // color: "#022B3A",
+  },
+  iconHome: {
+    fontSize: 28,
+    color: "orange",
     // color: "#022B3A",
   },
 });
