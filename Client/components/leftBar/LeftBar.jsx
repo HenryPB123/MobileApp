@@ -22,32 +22,20 @@ import {
 const LeftBar = ({ navigation }) => {
   return (
     <DrawerContentScrollView style={style.container}>
-      {/* <View style={style.containerMenu}> */}
       <Text style={style.title}>Menu</Text>
-      {/* </View> */}
 
-      {/* <View style={style.hr} /> */}
       <View style={style.containerMenu}>
         <TouchableOpacity
           style={style.button}
-          onPress={() => navigation.navigate("Profile")}
-        >
-          <Image
-            source={{
-              uri: "https://images.pexels.com/photos/69932/tabby-cat-close-up-portrait-69932.jpeg?auto=compress&cs=tinysrgb&w=600",
-            }}
-            style={style.imgPro}
-          ></Image>
-          <Text style={style.textButton}>Name Pet</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={style.button}
-          //   onPress={() => navigation.navigate("Home")}
+          onPress={() => navigation.navigate("Friends")}
         >
           <FontAwesome5 name="user-friends" style={style.icon} />
           <Text style={style.textButton}>Friends</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={style.button}>
+        <TouchableOpacity
+          style={style.button}
+          onPress={() => navigation.navigate("Groups")}
+        >
           <MaterialCommunityIcons
             name="account-group-outline"
             style={style.icon}

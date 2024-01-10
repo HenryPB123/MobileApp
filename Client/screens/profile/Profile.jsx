@@ -5,7 +5,14 @@ import React from "react";
 import style from "./profileStyle.js";
 
 //Icons
-import { Feather, MaterialCommunityIcons, Entypo } from "@expo/vector-icons";
+import {
+  Feather,
+  FontAwesome5,
+  Entypo,
+  Fontisto,
+  Ionicons,
+  MaterialIcons,
+} from "@expo/vector-icons";
 
 //components
 import Posts from "../../components/posts/Posts.jsx";
@@ -19,17 +26,11 @@ const Profile = () => {
       <ScrollView>
         <View style={style.containerViewIcons}>
           <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Entypo name="back" style={style.icons} />
+            <Ionicons name="chevron-back" style={style.icons} />
           </TouchableOpacity>
-
-          <TouchableOpacity>
-            <MaterialCommunityIcons
-              name="account-edit-outline"
-              style={style.icons}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Feather name="settings" style={style.icons} />
+          <Text style={style.textProfile}>Pet Name</Text>
+          <TouchableOpacity style={style.buttonTitle}>
+            <Text style={style.textButtonTitle}>Follow</Text>
           </TouchableOpacity>
         </View>
         <View style={style.images}>
@@ -46,48 +47,26 @@ const Profile = () => {
             style={style.profilePic}
           />
         </View>
-        {/* <View style={style.profileContainer}> */}
         <View style={style.userInfo}>
           <View style={style.left}>
-            {/* <Entypo name="facebook-with-circle" size={24} color="black" /> */}
-            {/* <a href="">
-              <FacebookTwoToneIcon className="large" />
-            </a>
-            <a href="">
-              <LinkedInIcon className="large" />
-            </a>
-            <a href="">
-              <InstagramIcon className="large" />
-            </a>
-            <a href="">
-              <PinterestIcon className="large" />
-            </a>
-            <a href="">
-              <TwitterIcon className="large" />
-            </a> */}
+            <Entypo name="facebook" style={style.iconLR} />
+            <FontAwesome5 name="instagram-square" style={style.iconLR} />
           </View>
           <View style={style.center}>
-            {/* <Text style={style.titleCenter}>Name Pet</Text>
-            <View style={style.info}>
-              <View style={style.item}> */}
-            {/* <PlaceIcon /> */}
-            {/* <Text style={style.textCenter}>USA</Text>
-              </View>
-              <View style={style.item}> */}
-            {/* <LanguageIcon /> */}
-            {/* <Text style={style.textCenter}>Social-Pet</Text>
-              </View>
+            <View style={style.item}>
+              <Entypo name="location-pin" style={style.iconCenter} />
+              <Text style={style.iconTextCenter}>USA</Text>
             </View>
-            <TouchableOpacity style={style.button}>
-              <Text style={style.textButton}>Follow</Text>
-            </TouchableOpacity> */}
+            <View style={style.item}>
+              <Fontisto name="world-o" style={style.iconCenter} />
+              <Text style={style.iconTextCenter}>myweb.com</Text>
+            </View>
           </View>
           <View style={style.right}>
-            {/* <MailOutlineIcon />
-            <MoreVertIcon /> */}
+            <MaterialIcons name="email" style={style.iconLR} />
+            <Feather name="more-vertical" style={style.iconLR} />
           </View>
         </View>
-        {/* </View> */}
 
         <Posts />
       </ScrollView>

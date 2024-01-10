@@ -24,7 +24,7 @@ const Navbar = () => {
           source={require("../../assets/huella.png")}
           style={style.img}
         ></Image>
-        <Text style={style.textTitle}>SWP</Text>
+        {/* <Text style={style.textTitle}>SWP</Text> */}
         <FontAwesome name="moon-o" style={style.icon} />
         <AntDesign name="appstore-o" style={style.icon} />
       </View>
@@ -35,15 +35,17 @@ const Navbar = () => {
       <View style={style.iconContainer}>
         <FontAwesome name="bell-o" style={style.icon} />
         <Feather name="mail" style={style.icon} />
-        <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-          <MaterialCommunityIcons name="home-circle" style={style.iconHome} />
+        <TouchableOpacity
+          style={style.button}
+          onPress={() => navigation.navigate("Profile")}
+        >
+          <Image
+            source={{
+              uri: "https://images.pexels.com/photos/69932/tabby-cat-close-up-portrait-69932.jpeg?auto=compress&cs=tinysrgb&w=600",
+            }}
+            style={style.imgPro}
+          ></Image>
         </TouchableOpacity>
-        {/* <Image
-          source={{
-            uri: "https://images.pexels.com/photos/69932/tabby-cat-close-up-portrait-69932.jpeg?auto=compress&cs=tinysrgb&w=600",
-          }}
-          style={style.imgPro}
-        ></Image> */}
       </View>
     </View>
   );

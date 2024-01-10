@@ -5,10 +5,11 @@ const navbarStyle = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     width: "100%",
-    backgroundColor: "#2F6690",
+    backgroundColor: "#C0C0C0",
     justifyContent: "space-between",
     alignItems: "center",
     padding: 6,
+    height: 50,
   },
   iconContainer: {
     display: "flex",
@@ -17,16 +18,16 @@ const navbarStyle = StyleSheet.create({
     gap: 5,
   },
   textTitle: {
-    color: "#fca311",
+    color: "#2F6690",
     fontWeight: "900",
   },
   img: {
-    width: 30,
-    height: 30,
+    width: 40,
+    height: 40,
   },
   imgPro: {
-    width: 36,
-    height: 36,
+    width: 30,
+    height: 30,
     borderRadius: 18,
     borderWidth: 0.5,
     borderColor: "#fca311",
@@ -37,7 +38,7 @@ const navbarStyle = StyleSheet.create({
     flexDirection: "row",
     backgroundColor: "#EBEBEB",
     borderWidth: 0.5,
-    borderColor: "#fca311",
+    borderColor: "#2F6690",
     width: "40%",
     height: 30,
     alignItems: "center",
@@ -53,7 +54,7 @@ const navbarStyle = StyleSheet.create({
   },
   icon: {
     fontSize: 20,
-    color: "orange",
+    color: "#2F6690",
     // color: "#022B3A",
   },
   iconHome: {
